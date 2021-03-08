@@ -1,0 +1,25 @@
+{
+  "name": "easy-trie",
+  "version": "0.0.2",
+  "description": "An easy to easy TypeScript implementation of the Trie data structure for ",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arghasarkar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arghasarkar/google-sheets-js.git"
+  },
+  "keywords": [
+    "trie",
+    "easy-trie",
+    "search",
+    "auto-complete"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arghasarkar/easy-trie/issues"
+  },
+  "homepage": "https://github.com/arghasarkar/easy-trie#readme"
+}
