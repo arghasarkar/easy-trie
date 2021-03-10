@@ -116,3 +116,6 @@ test.js
 
 # Dist
 dist
+
+# dependencies
+package-lock.json
