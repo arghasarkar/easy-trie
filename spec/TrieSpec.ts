@@ -90,4 +90,65 @@ describe("Testing class: Trie", () => {
 
     });
 
+    describe("Longest common prefix", () => {
+
+        describe("No common prefix", () => {
+            it("Returns empty string no words exist in the Trie", () => {
+                let trie = new Trie();
+                let expected = "";
+                let actual = trie.longestCommonPrefix();
+
+                expect(actual).toEqual(expected);
+            });
+
+            it("Returns empty string when no common prefix exists", () => {
+                let trie = new Trie();
+                trie.addWords(["hello", "world", "time"]);
+
+                let expected = "";
+                let actual = trie.longestCommonPrefix();
+                expect(actual).toEqual(expected);
+            });
+
+            it("Returns empty string when two prefixes exist between multiple words but not common for all.", () => {
+                let trie = new Trie();
+                trie.addWords(["hello", "he", "her", "bat", "ball"]);
+                let expected = "";
+                let actual = trie.longestCommonPrefix();
+
+                expect(actual).toEqual(expected);
+            })
+        });
+
+        describe("Longest common prefix exists", () => {
+            it("Unique multiple character longest common prefix", () => {
+                let trie = new Trie();
+                trie.addWords(["hello", "he", "her"]);
+                let expected = "he";
+                let actual = trie.longestCommonPrefix();
+
+                expect(actual).toEqual(expected);
+            });
+
+            it("Unique single character longest common prefix", () => {
+                let trie = new Trie();
+                trie.addWords(["box", "ball", "bee"]);
+                let expected = "b";
+                let actual = trie.longestCommonPrefix();
+
+                expect(actual).toEqual(expected);
+            });
+
+            it("A long prefix with spaces", () => {
+                let trie = new Trie();
+                trie.addWords(["hello", "hello world", "helloearth"]);
+                let expected = "hello";
+                let actual = trie.longestCommonPrefix();
+
+                expect(actual).toEqual(expected);
+            })
+        });
+
+    });
+
 });
