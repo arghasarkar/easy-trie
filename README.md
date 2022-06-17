@@ -38,3 +38,12 @@ trie.search("world");   // results = ["world"]
 
 trie.search("invalid"); // results = []
 ```
+
+## Longest common prefix
+Find the longest common prefix between all the words. If no common prefix exists, return an empty string.
+```javascript
+const trie = new Trie();
+trie.addWords(["hello", "he", "her"]);
+trie.longestCommonPrefix(); // results = "he"
+
+```

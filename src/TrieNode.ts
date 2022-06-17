@@ -60,6 +60,10 @@ export = class TrieNode {
       return this.letter;
     }
 
+    getChildNodeCount(): number {
+        return Object.keys(this.childNodes).length;
+    }
+
     setAsEndNode() {
       this.isEndNode = true;
     }
