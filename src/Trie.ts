@@ -39,7 +39,7 @@ export = class Trie {
             word = acc.concat(node.letter);
         }
 
-        if (node.getChildNodeCount() != 1) {
+        if (node.getChildNodeCount() != 1 || node.isEndNode) {
             return word
         }
         let childNode = node.childNodes[Object.keys(node.childNodes)[0]];

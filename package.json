@@ -1,6 +1,6 @@
 {
   "name": "easy-trie",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "An easy to easy TypeScript implementation of the Trie data structure for ",
   "main": "bundle.js",
   "scripts": {

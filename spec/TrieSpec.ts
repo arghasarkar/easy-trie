@@ -147,6 +147,15 @@ describe("Testing class: Trie", () => {
 
                 expect(actual).toEqual(expected);
             })
+
+            it("A long, common, prefix when the words are substrings of each other", () => {
+                let trie = new Trie();
+                trie.addWords(["aaaaa", "aaaa", "aaa", "aaaab"]);
+                let expected = "aaa";
+                let actual = trie.longestCommonPrefix();
+
+                expect(actual).toEqual(expected);
+            });
         });
 
     });
